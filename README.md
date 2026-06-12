@@ -26,30 +26,30 @@ rigorous walk-forward backtesting, and an agentic RAG synthesis layer.
 ┌──────────────────────────────────────────────────────────────────────────────────┐
 │                        AUTONOMOUS ALPHA ENGINE v2.0                              │
 ├──────────────────┬───────────────────────────┬───────────────────────────────────┤
-│   DATA LAYER     │      SIGNAL LAYER          │       STRATEGY LAYER              │
-│  ─────────────   │  ─────────────────────     │  ───────────────────────────      │
-│  S&P 500 OHLCV   │  XGBoost + Optuna HPO      │  Vectorised Backtester            │
-│  16yr News       │  LightGBM Classifier       │  Sharpe / Calmar / Sortino        │
-│  VADER NLP       │  Random Forest             │  Walk-Forward Validation          │
-│  FinBERT NLP     │  Stacking Meta-Ensemble    │  Monthly Return Heatmaps          │
-│  VIX / TNX / DXY │  LSTM + Attention          │  Monte Carlo (10K paths)          │
-│  Macro Indicators│  Isolation Forest          │  GAN Stress Testing               │
-│  HMM Regimes     │  Probability Calibration   │  Markowitz Portfolio Optim.       │
+│   DATA LAYER     │      SIGNAL LAYER         │       STRATEGY LAYER              │
+│  ─────────────   │  ─────────────────────    │  ───────────────────────────      │
+│  S&P 500 OHLCV   │  XGBoost + Optuna HPO     │  Vectorised Backtester            │
+│  16yr News       │  LightGBM Classifier      │  Sharpe / Calmar / Sortino        │
+│  VADER NLP       │  Random Forest            │  Walk-Forward Validation          │
+│  FinBERT NLP     │  Stacking Meta-Ensemble   │  Monthly Return Heatmaps          │
+│  VIX / TNX / DXY │  LSTM + Attention         │  Monte Carlo (10K paths)          │
+│  Macro Indicators│  Isolation Forest         │  GAN Stress Testing               │
+│  HMM Regimes     │  Probability Calibration  │  Markowitz Portfolio Optim.       │
 └──────────────────┴───────────────────────────┴───────────────────────────────────┘
                                      │
                         ┌────────────▼──────────────┐
-                        │   AGENTIC RAG SYNTHESIS    │
-                        │  Multi-Model Committee     │
-                        │  FAISS Vector DB (Macro)   │
-                        │  GPT-4o Final Directive    │
+                        │   AGENTIC RAG SYNTHESIS   │
+                        │  Multi-Model Committee    │
+                        │  FAISS Vector DB (Macro)  │
+                        │  GPT-4o Final Directive   │
                         └───────────────────────────┘
                                      │
                         ┌────────────▼──────────────┐
-                        │   FastAPI v2 Microservice  │
-                        │  /predict/signal           │
-                        │  /predict/ensemble         │
-                        │  /predict/risk             │
-                        │  /backtest/quick           │
+                        │   FastAPI v2 Microservice │
+                        │  /predict/signal          │
+                        │  /predict/ensemble        │
+                        │  /predict/risk            │
+                        │  /backtest/quick          │
                         └───────────────────────────┘
 ```
 
